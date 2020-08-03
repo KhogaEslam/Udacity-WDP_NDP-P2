@@ -18,17 +18,25 @@ Starter code is cloned from Udacity [fend repository - Landing Page](https://git
 
 ## Project Structure
 
-> website   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains website [front-end] files
+> website          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains website [front-end] files
 
->> style.css   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains Page's styles
+>> css             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains Page's styles sheets
 
->> index.html   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains HTML code
+>>> style.css      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains Main Page's styles
 
->> js   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains website [front-end] JS files
+>> js              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains website [front-end] JS files
 
-> server.js   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains all required server functionalities
+>>> app.js         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains all required JS FE functionalities
 
-> README.md     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // You are currently reading it :D
+>>> constants.js   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains constants for FE
+
+>> index.html      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains HTML code
+
+
+
+> server.js        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // Contains all required server functionalities
+
+> README.md        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; // You are currently reading it :D
 
 
 ## How To Run

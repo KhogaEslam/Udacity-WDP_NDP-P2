@@ -40,11 +40,31 @@ body{
 
 }
 
+#country {
+    width: 72%;
+}
+
 .headline {
 
 }
 .title{
 
+}
+
+.region {
+    display: flex;
+}
+
+.country {
+    width: 50%;
+}
+
+.zip {
+    width: 50%;
+}
+
+.generate {
+    float: right;
 }
 
 /*  Basic Styling To Override Default For Basic HTML Elements */
@@ -83,6 +103,7 @@ textarea{
     color: #f0d43a;
     font-size: 20px;
     font-family: 'Oswald', sans-serif;
+    width: 100%;
 }
 /* Reset style for HTML element on active to have no border*/
 input:focus,
