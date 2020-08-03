@@ -1,15 +1,9 @@
 // Global Variables
 let feelings;
 
-// Personal API Key for OpenWeatherMap API
-const personalAPIKey = '7986d63ef8456b23aabd37a4d869bb0f';
-
-const baseURL = `https://api.openweathermap.org/data/2.5/weather?appid=${personalAPIKey}&units=metric&zip=`;
-
 /* Helper Functions */
-const buildURLToOpenWeatherMap = (country, zipCode) => {
-    const countryCode = country != null && country.length > 0 ? country : 'US';
-    console.log(countryCode);
+const buildURLToOpenWeatherMap = (countryCode, zipCode) => {
+
     return `${baseURL}${zipCode},${countryCode}`;
 }
 
@@ -83,12 +77,14 @@ const generateWeatherData = () => {
 /* Function to GET Web API Data*/
 const getWeatherDataByZIP = async (country, zipCode) => {
 
-    const weatherURL = buildURLToOpenWeatherMap(country, zipCode); // Build API URL
+    const countryCode = country != null && country.length > 0 ? country : 'US';
+
+    const weatherURL = buildURLToOpenWeatherMap(countryCode, zipCode); // Build API URL
     const response = await fetch(weatherURL); // Get weather info from OpenWeatherMap
 
     try {
         const weatherData = await response.json(); // Convert response to JSON and store it
-        weatherData.country = country; // Store country code in returned data
+        weatherData.country = countryCode; // Store country code in returned data
         weatherData.zipCode = zipCode; // Store selected zip code in returned data
         
         // Break Promise chaine if OpenWeatherMap API response is not OK.
@@ -159,16 +155,20 @@ const getAppData = async () => {
 // Update current UI entry
 const updateUI = async ( appData ) => {
 
+    console.log(appData);
     let allEntries = "";
 
     for (const entry of appData.reverse()) {
 
         const journalEntry = `
             <div class="journalEntry">
-                <div id="date">${entry.date}</div>
-                <div id="temp">${entry.temp}°F</div>
-                <div id="content">${entry.feelings}</div>
+                <div id="date">Date: ${entry.date}</div>
+                <div id="country">Country: ${entry.country}</div>
+                <div id="city">City: ${entry.name}</div>
+                <div id="temp">Trmprature: ${entry.temp}°F</div>
+                <div id="content">Feelings: ${entry.feelings}</div>
             </div>
+            <hr>
         `;
 
         allEntries += journalEntry;

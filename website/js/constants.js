@@ -1,3 +1,8 @@
+// Personal API Key for OpenWeatherMap API
+const personalAPIKey = '7986d63ef8456b23aabd37a4d869bb0f';
+
+const baseURL = `https://api.openweathermap.org/data/2.5/weather?appid=${personalAPIKey}&units=metric&zip=`;
+
 const countries = [
     { Code: "AF", Name: "Afghanistan" },
     { Code: "AX", Name: "\u00c5land Islands" },
